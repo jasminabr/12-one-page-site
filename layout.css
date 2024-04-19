@@ -1,0 +1,165 @@
+html {
+  font-size: 62.5;
+}
+
+body {
+  width: auto;
+  color: aliceblue;
+  background-color: rgb(61, 58, 58);
+}
+
+#sailio {
+  margin: 4rem 1.5rem 1.5rem 1.5rem;
+}
+
+/* The navigation bar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgb(26, 26, 82);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 40px;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  background: #a69f9f;
+  color: #f2f2f2;
+}
+
+/* Main content */
+.main {
+  background-image: url(./assets/backgro.jpeg);
+  max-width: 100%;
+  margin-top: auto;
+  padding: 4rem;
+}
+
+#mainpart {
+  background-color: rgba(33, 28, 28, 0.855);
+  max-width: 100%;
+  height: 300px;
+}
+
+/* Menneisyys section */
+#menne {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: rgb(244, 247, 250);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  color: black;
+  background-color: rgb(237, 229, 219);
+}
+
+.menne-sect {
+  border: 2px solid rgb(179, 175, 175);
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 200px;
+}
+.menne-photo {
+  max-width: 200px;
+}
+
+#menne h1 {
+  font-size: 2rem;
+  color: black;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+#menne h2 {
+  font-weight: bold;
+  padding: 5px;
+}
+#menne a {
+  font-size: 1rem;
+  color: peachpuff;
+}
+/* Nykyisyys section */
+
+#nyky {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.nyky-sect {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  color: black;
+}
+
+#nyky img {
+  width: 300px;
+  float: right;
+}
+
+/* Tulevaisuus section */
+#tule {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#tule img,
+#nyky img {
+  width: 300px;
+  float: left;
+  margin: 1rem;
+  padding: 0rem;
+}
+
+#tule h3,
+#nyky h3 {
+  color: #da6207;
+  margin: 10px;
+  font-size: 2rem;
+}
+#tule p,
+#nyky p {
+  margin: 1rem;
+  padding: 0rem;
+  color: #fdfdfd;
+}
+.tule-sect {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  color: black;
+}
+
+/* @media only screen and (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+
+  #menne container {
+    flex-direction: column;
+  }
+} */
