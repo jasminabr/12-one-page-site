@@ -4,18 +4,24 @@
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./layout.css" />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <title>One-Page-Site</title>
   </head>
   <body>
     <!--  seksioni navigimit -->
-    <div class="navbar">
-      <a href="#home"><span>Portfolio</span> </a>
-      <a href="#Menneisyys">Menneisyys </a>
-      <a href="#Nykyisyys">Nykyisyys </a>
-      <a href="#Tulevaisuus">Tulevaisuus </a>
-      <a href="#Yhteistiedot">Yhteistiedot </a>
-    </div>
+    <nav>
+      <ul class="list">
+        <li style="float: left"><a href="#home">Portfolio</a></li>
+        <li><a href="#Yhteistiedot">Yhteistiedot </a></li>
+        <li><a href="#Tulevaisuus">Tulevaisuus </a></li>
+        <li><a href="#Nykyisyys">Nykyisyys </a></li>
+        <li><a href="#Menneisyys">Menneisyys </a></li>
+      </ul>
+    </nav>
 
     <!--   Pjesa e prezantimit-->
 
@@ -28,12 +34,12 @@
             avulla
           </h2>
           <ol>
-            <li>Eka Esimerkki</li>
-            <li>Toka esimerkki</li>
-            <li>Kolmas esimerkki</li>
-            <li>...</li>
-            <li>Kuudes esimerkki</li>
-            <li>.... te linkit kaikkiin esimerkkeihin...</li>
+            <li><a href="#"> Eka Esimerkki</a></li>
+            <li><a href="#">Toka esimerkki </a></li>
+            <li><a href="#">Kolmas esimerkki</a></li>
+            <li><a href="#">...</a></li>
+            <li><a href="#">Kuudes esimerkki</a></li>
+            <li><a href="#">.... te linkit kaikkiin esimerkkeihin...</a></li>
           </ol>
         </section>
       </div>
@@ -44,11 +50,7 @@
 
         <div class="container">
           <div class="menne-sect">
-            <img
-              class="menne-photo"
-              src="./assets/mali.jpeg"
-              alt="Menneisyys Section Photo"
-            />
+            <img src="./assets/mali.jpeg" alt="Menneisyys Section Photo" />
             <h2>Card Title One</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
@@ -60,11 +62,7 @@
             <a href="#"> <p>See more</p></a>
           </div>
           <div class="menne-sect">
-            <img
-              class="menne-photo"
-              src="./assets/mali.jpeg"
-              alt="Menneisyys Section Photo"
-            />
+            <img src="./assets/mali.jpeg" alt="Menneisyys Section Photo" />
             <h2>Card Title One</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
@@ -76,11 +74,7 @@
             <a href="#"> <p>See more</p></a>
           </div>
           <div class="menne-sect">
-            <img
-              class="menne-photo"
-              src="./assets/mali.jpeg"
-              alt="Menneisyys Section Photo"
-            />
+            <img src="./assets/mali.jpeg" alt="Menneisyys Section Photo" />
             <h2>Card Title One</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sit
@@ -89,12 +83,12 @@
               officiis cumque natus earum.Lorem, ipsum dolor sit amet
               consectetur adipisicing.
             </p>
-           <a href="#"> <p>See more</p></a>
+            <a href="#"> <p>See more</p></a>
           </div>
         </div>
       </div>
 
-      <br>
+      <br />
 
       <hr />
 
@@ -103,11 +97,17 @@
         <h3>Nykyisyys</h3>
         <div class="nyky-sect">
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
-            quia et, similique sed odit eum, impedit animi magni, iure nisi in
-            neque ipsa eveniet facere natus voluptas accusamus temporibus atque
-            voluptatibus nemo provident itaque ad quod dicta. Itaque, ex
-            aperiam?Lorem ipsum dolor sit amet consectetur adipisicing.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+            quibusdam, quas, impedit doloribus consequuntur optio doloremque,
+            voluptatibus deserunt culpa eum reiciendis aspernatur perspiciatis.
+            Mollitia ab animi consectetur voluptatibus? Vel perspiciatis
+            exercitationem quae nisi est vitae aspernatur assumenda deserunt
+            quidem! Sunt! Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Quidem quia et, similique sed odit eum, impedit animi magni,
+            iure nisi in neque ipsa eveniet facere natus voluptas accusamus
+            temporibus atque voluptatibus nemo provident itaque ad quod dicta.
+            Itaque, ex aperiam?Lorem ipsum dolor sit amet consectetur
+            adipisicing.
           </p>
           <img
             class="Nyky-photo"
@@ -143,35 +143,34 @@
         </div>
       </div>
 
-      <hr>
-
+      <hr />
+      <br />
       <!--seksioni i formes Contact Me-->
       <h3>Contact Me</h3>
-      <div class="forma">
-        <form id="myForm">
+      <form id="myForm">
+        <div class="contact">
           <label for="firstName">Nimi:</label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            required
-          />
-      </div><br /><br />
-<div class="forma">
-  
+          <input ype="text" id="fullName" name="fulltName" required />
+        </div>
+
+        <div class="contact">
           <label for="lastName">Sahkoposti:</label>
-          <input type="text" id="lastName" name="lastName" required />
-</div>
-<br /><br />
-<div class="forma">
-  
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="contact">
           <label for="email">Palautetta:</label>
-  
-          <input type="email" id="email" name="email" required /><br /><br />
-</div>
+          <input type="text" id="palautetta" name="palautetta" required />
+        </div>
 
         <button type="submit">Lähetä</button>
       </form>
+      <br />
+      <hr />
+
+      <footer>
+        <p>2024 © Etunimi Sukunimi</p>
+      </footer>
     </div>
   </body>
 </html>

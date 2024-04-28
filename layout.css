@@ -14,26 +14,22 @@ body {
 
 /* The navigation bar */
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+nav {
+  box-sizing: border-box;
   overflow: hidden;
   background-color: rgb(26, 26, 82);
   position: fixed;
   top: 0;
   width: 100%;
-  height: 40px;
 }
-.navbar a {
+nav a {
   float: left;
-  display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 2rem;
   text-decoration: none;
 }
-.navbar a:hover {
+ul a:hover {
   background: #a69f9f;
   color: #f2f2f2;
 }
@@ -50,38 +46,61 @@ body {
   background-color: rgba(33, 28, 28, 0.855);
   max-width: 100%;
   height: 300px;
+  margin: 1rem;
+  padding: 1rem;
 }
 
+#mainpart h1,
+#mainpart h2 {
+  color: #da6207;
+  font-size: 1.5em;
+  margin: 1rem;
+}
+
+ol {
+  margin-left: 3rem;
+}
+
+#mainpart li a {
+  color: bisque;
+  text-decoration: none;
+}
+
+#mainpart li {
+  padding: 5px;
+  list-style-type: decimal;
+}
 /* Menneisyys section */
 #menne {
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  padding: 2rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
   background-color: rgb(244, 247, 250);
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 10px;
-  flex-wrap: nowrap;
   justify-content: space-between;
   color: black;
   background-color: rgb(237, 229, 219);
+  width: 100%;
 }
 
 .menne-sect {
   border: 2px solid rgb(179, 175, 175);
   background: white;
   padding: 10px;
+  margin: 5px;
   border-radius: 10px;
-  max-width: 200px;
-}
-.menne-photo {
-  max-width: 200px;
+  max-width: 100%;
 }
 
+.container img {
+  max-width: 100%;
+  max-height: 100%;
+}
 #menne h1 {
   font-size: 2rem;
   color: black;
@@ -106,17 +125,11 @@ body {
 }
 
 .nyky-sect {
-  display: flex;
   flex-direction: row;
   padding: 10px;
   flex-wrap: nowrap;
   justify-content: space-between;
   color: black;
-}
-
-#nyky img {
-  width: 300px;
-  float: right;
 }
 
 /* Tulevaisuus section */
@@ -128,14 +141,14 @@ body {
 
 #tule img,
 #nyky img {
-  width: 300px;
-  float: left;
+  max-width: 90%;
   margin: 1rem;
   padding: 0rem;
 }
 
 #tule h3,
-#nyky h3 {
+#nyky h3,
+h3 {
   color: #da6207;
   margin: 10px;
   font-size: 2rem;
@@ -147,19 +160,104 @@ body {
   color: #fdfdfd;
 }
 .tule-sect {
-  display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
   justify-content: space-between;
   color: black;
 }
 
-/* @media only screen and (max-width: 600px) {
-  .desktop {
-    display: none;
+/* form assetukset */
+#myForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 1rem;
+}
+.contact {
+  margin: 10px;
+}
+button {
+  display: block;
+  padding: 10px;
+  background-color: #da6207;
+  color: #fdfdfd;
+
+  font-size: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  width: 100%;
+}
+
+/* footer assetukset  */
+
+footer p {
+  margin: 10px;
+  padding: 5px;
+  word-spacing: 10px;
+}
+
+/* RESPONSIIVISUUS*/
+
+/*TABLET*/
+@media only screen and (min-width: 470px) {
+  nav li {
+    display: inline;
+    float: right;
   }
 
-  #menne container {
+  nav {
+    flex-direction: row;
+    max-width: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nyky-sect {
+    display: flex;
     flex-direction: column;
   }
-} */
+  .nyky-photo,
+  .tule-photo {
+    align-items: center;
+  }
+}
+
+/*DESKTOP*/
+@media only screen and (min-width: 890px) {
+  nav li {
+    display: inline;
+    float: right;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+  .nyky-sect {
+    display: flex;
+    flex-direction: row;
+  }
+  .tule-sect {
+    display: flex;
+  }
+  .tule-photo {
+    float: left;
+  }
+  #tule img,
+  #nyky img {
+    min-width: 400px;
+    margin: 1rem;
+    padding: 0rem;
+    max-width: 100%;
+  }
+  .contact {
+    display: grid;
+    grid-template-columns: 2fr 80%;
+  }
+}
