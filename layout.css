@@ -14,24 +14,46 @@ body {
 
 /* The navigation bar */
 
-nav {
+#navbar {
   box-sizing: border-box;
-  overflow: hidden;
-  background-color: rgb(26, 26, 82);
+  padding: 1rem;
+  background-color: rgb(22, 22, 24);
+  border-bottom: 1px solid #ccc;
   position: fixed;
-  top: 0;
   width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
-nav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 2rem;
+
+#navbar ul {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+#navbar li {
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 0 5px 0 5px;
+  font-size: 9px;
+}
+#navbar a {
+  color: white;
+  padding: 5px;
   text-decoration: none;
 }
+ul li:first-child {
+  flex: 1;
+}
+
 ul a:hover {
   background: #a69f9f;
   color: #f2f2f2;
+}
+figure img {
+  max-width: 100%;
 }
 
 /* Main content */
@@ -39,22 +61,20 @@ ul a:hover {
   background-image: url(./assets/backgro.jpeg);
   max-width: 100%;
   margin-top: auto;
-  padding: 4rem;
+  padding: 0.5rem;
 }
 
 #mainpart {
   background-color: rgba(33, 28, 28, 0.855);
   max-width: 100%;
-  height: 300px;
-  margin: 1rem;
-  padding: 1rem;
+  margin: 5px;
+  padding: 10px;
 }
 
 #mainpart h1,
 #mainpart h2 {
   color: #da6207;
-  font-size: 1.5em;
-  margin: 1rem;
+  margin: 10px;
 }
 
 ol {
@@ -70,18 +90,36 @@ ol {
   padding: 5px;
   list-style-type: decimal;
 }
+
+/* buttons click */
+
+.section {
+  position: relative;
+  border-bottom: 1.5px #da6207 solid;
+}
+.anchor {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  top: -70px;
+  left: 0;
+  visibility: hidden;
+}
+
 /* Menneisyys section */
 #menne {
   box-sizing: border-box;
+  margin: 0rem 0 1rem 0;
   display: flex;
-  flex-wrap: wrap;
-  padding: 1.5rem;
+  flex-direction: column;
+  padding: 10px;
   background-color: rgb(244, 247, 250);
 }
 
 .container {
   flex-direction: column;
-  padding: 10px;
   justify-content: space-between;
   color: black;
   background-color: rgb(237, 229, 219);
@@ -91,20 +129,18 @@ ol {
 .menne-sect {
   border: 2px solid rgb(179, 175, 175);
   background: white;
-  padding: 10px;
+  padding: 5px;
   margin: 5px;
   border-radius: 10px;
   max-width: 100%;
 }
-
 .container img {
-  max-width: 100%;
-  max-height: 100%;
+  margin: 5px 0 auto;
+  width: 100%;
 }
+
 #menne h1 {
-  font-size: 2rem;
-  color: black;
-  font-size: 1.6rem;
+  color: #da6207;
   margin-bottom: 1rem;
 }
 
@@ -112,38 +148,26 @@ ol {
   font-weight: bold;
   padding: 5px;
 }
+#menne p {
+  padding: 5px;
+  font-size: 10px;
+  text-align: justify;
+}
 #menne a {
-  font-size: 1rem;
   color: peachpuff;
 }
+
 /* Nykyisyys section */
 
 #nyky {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
-
-.nyky-sect {
-  flex-direction: row;
-  padding: 10px;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  color: black;
+  margin: 5px;
 }
 
 /* Tulevaisuus section */
 #tule {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
-
-#tule img,
-#nyky img {
-  max-width: 90%;
-  margin: 1rem;
-  padding: 0rem;
+  margin: 5px;
 }
 
 #tule h3,
@@ -151,10 +175,10 @@ ol {
 h3 {
   color: #da6207;
   margin: 10px;
-  font-size: 2rem;
 }
 #tule p,
 #nyky p {
+  text-align: justify;
   margin: 1rem;
   padding: 0rem;
   color: #fdfdfd;
@@ -162,28 +186,26 @@ h3 {
 .tule-sect {
   flex-direction: row-reverse;
   flex-wrap: nowrap;
-  justify-content: space-between;
   color: black;
 }
 
 /* form assetukset */
 #myForm {
   display: flex;
+  padding-bottom: 1rem;
   flex-direction: column;
   flex-wrap: wrap;
   max-width: 100%;
   margin: 1rem;
 }
 .contact {
-  margin: 10px;
+  margin: 5px;
 }
 button {
   display: block;
-  padding: 10px;
+  padding: 5px;
   background-color: #da6207;
   color: #fdfdfd;
-
-  font-size: 1.2rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -203,58 +225,63 @@ footer p {
 /* RESPONSIIVISUUS*/
 
 /*TABLET*/
-@media only screen and (min-width: 470px) {
-  nav li {
-    display: inline;
-    float: right;
+@media only screen and (min-width: 426px) {
+  #navbar li {
+    font-size: 12px;
   }
-
-  nav {
-    flex-direction: row;
-    max-width: 100%;
-  }
-
   .container {
     display: flex;
     flex-direction: row;
   }
 
-  .nyky-sect {
-    display: flex;
-    flex-direction: column;
+  #nyky figure {
+    width: 14rem;
+    float: left;
+    margin-bottom: 5px;
+    margin-right: 10px;
   }
-  .nyky-photo,
-  .tule-photo {
-    align-items: center;
+  #tule figure {
+    width: 14rem;
+    float: right;
+    margin-bottom: 5px;
+    margin-left: 10px;
+  }
+  #tule p,
+  #nyky p {
+    text-align: justify;
+  }
+
+  .contact {
+    display: grid;
+    grid-template-columns: 2fr 75%;
   }
 }
 
 /*DESKTOP*/
-@media only screen and (min-width: 890px) {
-  nav li {
-    display: inline;
-    float: right;
+@media only screen and (min-width: 769px) {
+  #navbar li {
+    font-size: 15px;
   }
   .container {
     display: flex;
     flex-direction: row;
   }
-  .nyky-sect {
+  #nyky {
     display: flex;
     flex-direction: row;
   }
-  .tule-sect {
+  #tule {
     display: flex;
+    flex-direction: row-reverse;
   }
-  .tule-photo {
-    float: left;
+
+  #tule figure {
+    margin: 20px 0px 20px 0px;
+    width: 150rem;
   }
-  #tule img,
-  #nyky img {
-    min-width: 400px;
-    margin: 1rem;
-    padding: 0rem;
-    max-width: 100%;
+  #nyky figure {
+    margin: 20px 0px 20px 0px;
+    width: 150rem;
   }
   .contact {
     display: grid;

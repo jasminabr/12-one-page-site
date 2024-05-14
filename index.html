@@ -13,19 +13,20 @@
   </head>
   <body>
     <!--  seksioni navigimit -->
-    <nav>
-      <ul class="list">
-        <li style="float: left"><a href="#home">Portfolio</a></li>
-        <li><a href="#Yhteistiedot">Yhteistiedot </a></li>
-        <li><a href="#Tulevaisuus">Tulevaisuus </a></li>
-        <li><a href="#Nykyisyys">Nykyisyys </a></li>
-        <li><a href="#Menneisyys">Menneisyys </a></li>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#anchor1">Portfolio</a></li>
+        <li><a href="#anchor2">Menneisyys </a></li>
+        <li><a href="#anchor3">Nykyisyys</a></li>
+        <li><a href="#anchor4">Tulevaisuus </a></li>
+        <li><a href="#anchor5">Yhteistiedot </a></li>
       </ul>
     </nav>
 
     <!--   Pjesa e prezantimit-->
 
     <div id="sailio">
+      <span id="anchor1" class="anchor"></span>
       <div class="main">
         <section id="mainpart">
           <h1>Portfolio -Etunimi Sukunimi</h1>
@@ -45,57 +46,66 @@
       </div>
 
       <!-- seksioni tresh per te kaluaren -->
-      <div id="menne">
-        <h1>Menneisyys</h1>
 
-        <div class="container">
-          <div class="menne-sect">
-            <img src="./assets/mali.jpeg" alt="Menneisyys Section Photo" />
-            <h2>Card Title One</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-              perferendis quo, sint architecto nobis hic eaque molestiae velit
-              iste pariatur amet explicabo. Incidunt saepe vitae, suscipit
-              labore modi dolor maxime?Lorem, ipsum dolor sit amet consectetur
-              adipisicing.
-            </p>
-            <a href="#"> <p>See more</p></a>
-          </div>
-          <div class="menne-sect">
-            <img src="./assets/mali.jpeg" alt="Menneisyys Section Photo" />
-            <h2>Card Title One</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-              cumque ad provident, placeat debitis labore eaque ex nam?
-              Cupiditate totam vero voluptatibus deserunt natus saepe eius sint
-              ipsam ut alias.Lorem, ipsum dolor sit amet consectetur
-              adipisicing.
-            </p>
-            <a href="#"> <p>See more</p></a>
-          </div>
-          <div class="menne-sect">
-            <img src="./assets/mali.jpeg" alt="Menneisyys Section Photo" />
-            <h2>Card Title One</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sit
-              facilis distinctio nostrum rem corrupti dignissimos magnam nobis
-              alias ullam, minus doloremque dolorem esse nesciunt illum,
-              officiis cumque natus earum.Lorem, ipsum dolor sit amet
-              consectetur adipisicing.
-            </p>
-            <a href="#"> <p>See more</p></a>
+      <div class="section">
+        <span id="anchor2" class="anchor"></span>
+        <div id="menne">
+          <h1>Menneisyys</h1>
+          <div class="container">
+            <div class="menne-sect">
+              <img src="./assets/mali.jpeg" alt="Menneisyys Section Photo" />
+              <h2>Card Title One</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                perferendis quo, sint architecto nobis hic eaque molestiae velit
+                iste pariatur amet explicabo. Incidunt saepe vitae, suscipit
+                labore modi dolor maxime?Lorem, ipsum dolor sit amet consectetur
+                adipisicing.
+              </p>
+              <a href="#"> <p>See more</p></a>
+            </div>
+            <div class="menne-sect">
+              <img src="./assets/mali.jpeg" alt="Menneisyys Section Photo" />
+              <h2>Card Title One</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis cumque ad provident, placeat debitis labore eaque ex
+                nam? Cupiditate totam vero voluptatibus deserunt natus saepe
+                eius sint ipsam ut alias.Lorem, ipsum dolor sit amet consectetur
+                adipisicing.
+              </p>
+              <a href="#"> <p>See more</p></a>
+            </div>
+            <div class="menne-sect">
+              <img src="./assets/mali.jpeg" alt="Menneisyys Section Photo" />
+              <h2>Card Title One</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+                sit facilis distinctio nostrum rem corrupti dignissimos magnam
+                nobis alias ullam, minus doloremque dolorem esse nesciunt illum,
+                officiis cumque natus earum.Lorem, ipsum dolor sit amet
+                consectetur adipisicing.
+              </p>
+              <a href="#"> <p>See more</p></a>
+            </div>
           </div>
         </div>
       </div>
 
-      <br />
-
-      <hr />
-
       <!-- Paragrafi per te tashmen -Nykyisyys-->
-      <div id="nyky">
+
+      <div class="section">
+        <span id="anchor3" class="anchor"></span>
+
         <h3>Nykyisyys</h3>
-        <div class="nyky-sect">
+        <div id="nyky">
+          <figure>
+            <img
+              class="Nyky-photo"
+              src="./assets/Bg-koti.jpeg"
+              alt="Nykyisyys Section Photo"
+            />
+          </figure>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
             quibusdam, quas, impedit doloribus consequuntur optio doloremque,
@@ -109,64 +119,61 @@
             Itaque, ex aperiam?Lorem ipsum dolor sit amet consectetur
             adipisicing.
           </p>
-          <img
-            class="Nyky-photo"
-            src="./assets/Bg-koti.jpeg"
-            alt="Nykyisyys Section Photo"
-          />
         </div>
       </div>
-
-      <hr />
 
       <!--Paragrafi per te ardhmen-Tulevaisuus-->
-      <div id="tule">
+      <div class="section">
+        <span id="anchor4" class="anchor"></span>
+
         <h3>Tulevaisuus</h3>
-        <div class="tule-sect">
+        <div id="tule">
+          <figure>
+            <img
+              class="tule-photo"
+              src="./assets/backgro.jpeg"
+              alt="Tulevaisuus section photo"
+            />
+          </figure>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni
-            alias inventore et odio eaque autem quos quasi natus nostrum rerum
-            ratione repellat corrupti ipsa, ex vel, doloremque vitae sequi est.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-            culpa enim, laudantium laboriosam facilis suscipit. Lorem, ipsum
-            dolor sit amet consectetur adipisicing elit. Pariatur laborum et
-            suscipit unde fuga non quos accusamus architecto molestiae
-            necessitatibus! Eos nobis aut ipsam praesentium. Id architecto iusto
-            reprehenderit commodi?Lorem ipsum dolor sit amet consectetur
-            dipisicing.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+            hic eum, quam dolorum architecto necessitatibus veritatis
+            voluptatibus deserunt possimus veniam perspiciatis ratione odio
+            dicta illum nemo delectus fugiat, maxime ipsam. Lorem ipsum dolor
+            sit, amet consectetur adipisicing elit. Magni alias inventore et
+            odio eaque autem quos quasi natus nostrum rerum ratione repellat
+            corrupti ipsa, ex vel, doloremque vitae sequi est. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Dolore culpa enim, laudantium
+            laboriosam facilis suscipit. Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Pariatur laborum et suscipit unde fuga non quos
+            accusamus architecto molestiae necessitatibus! Eos nobis aut ipsam
+            praesentium. Id architecto iusto reprehenderit commodi?Lorem ipsum
+            dolor sit amet consectetur dipisicing.
           </p>
-          <img
-            class="tule-photo"
-            src="./assets/backgro.jpeg"
-            alt="Tulevaisuus section photo"
-          />
         </div>
       </div>
 
-      <hr />
-      <br />
       <!--seksioni i formes Contact Me-->
-      <h3>Contact Me</h3>
-      <form id="myForm">
-        <div class="contact">
-          <label for="firstName">Nimi:</label>
-          <input ype="text" id="fullName" name="fulltName" required />
-        </div>
 
-        <div class="contact">
-          <label for="lastName">Sahkoposti:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-
-        <div class="contact">
-          <label for="email">Palautetta:</label>
-          <input type="text" id="palautetta" name="palautetta" required />
-        </div>
-
-        <button type="submit">Lähetä</button>
-      </form>
-      <br />
-      <hr />
+      <div class="section">
+        <span id="anchor5" class="anchor"></span>
+        <h3>Contact Me</h3>
+        <form id="myForm">
+          <div class="contact">
+            <label for="firstName">Nimi:</label>
+            <input ype="text" id="fullName" name="fulltName" required />
+          </div>
+          <div class="contact">
+            <label for="lastName">Sahkoposti:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="contact">
+            <label for="email">Palautetta:</label>
+            <input type="text" id="palautetta" name="palautetta" required />
+          </div>
+          <button type="submit">Lähetä</button>
+        </form>
+      </div>
 
       <footer>
         <p>2024 © Etunimi Sukunimi</p>
